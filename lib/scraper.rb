@@ -7,8 +7,8 @@ require 'open-uri'
 
 doc = Nokogiri::HTML(open("https://flatironschool.com/"))
 puts doc.css(".headline-26OIBN").text.strip
-courses = doc.css(".gridContainer-EnvccM..inlineMobileLeft-2Yo002.imageTextBlockGrid2-3jXtmC")
- 
+courses = doc.css(".gridContainer-EnvccM.inlineMobileLeft-2Yo002.imageTextBlockGrid2-3jXtmC")
+
 courses.each do |course|
   puts course.text.strip
 end
